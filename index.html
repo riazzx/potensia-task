@@ -1,0 +1,710 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- ----------------------------NAVBAR---------------------------- -->
+    <nav class="navbar navbar-expand-lg bg-transparent p-4" id="nav">
+        <div class="container-fluid">
+            <a class="navbar-brand"><img src="logo.png" id="logo"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="d-flex">
+                <div class="navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active text-white" aria-current="page" href="#" id>Buy</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="#">Properties</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="#">Guides</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white">About Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white">Contact</a>
+                        </li>
+                        <li class="nav-item">
+                            <button class="btn btn-outline-light " type="submit">Get in Touch</button>
+                        </li>
+                    </ul>
+                </div>
+                <form class="d-flex" role="search">
+
+
+                    <a class="fa-solid fa-magnifying-glass fa-2xl" id="nav-list-search"></a>
+
+                </form>
+            </div>
+
+        </div>
+    </nav>
+    <!-- ----------------------------NAVBAR---------------------------- -->
+    <div class="card text-bg-transparent" id="hero-banner">
+        <img src="hero-banner.png" class="card-img" alt="...">
+        <!-- <div class="card-img-overlay">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+          <p class="card-text"><small>Last updated 3 mins ago</small></p>
+        </div> -->
+    </div>
+
+    <div class="p-5 bg-black text-bg-dark">
+        <h2>Featured Properties</h2>
+        <span>
+            <a onclick="changeCardContent(0)">Apartments</a>
+            <a onclick="changeCardContent(1)">Villas</a>
+        </span>
+        <div>
+            <div class="row row-cols-1 row-cols-md-3 g-4 ">
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="card1.png" class="card-img-top" alt="...">
+                        <div class="card-img-overlay text-white">
+                            <h5 class="card-title">Property 1</h5>
+                            <p class="card-text">From 4000000 AED</p>
+
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title" id="cardTitle0">Card title</h5>
+                            <p class="card-text" id="cardContent0">This is a wider card with supporting text below as a
+                                natural lead-in to
+                                additional content. This content is a little bit longer.</p>
+                        </div>
+                        <div class="card-footer">
+                            <small class="text-body-secondary">Last updated 3 mins ago</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="card2.png" class="card-img-top" alt="...">
+                        <div class="card-img-overlay text-white">
+                            <h5 class="card-title">Property 2</h5>
+                            <p class="card-text">From 4000000 AED</p>
+
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title" id="cardTitle1">Card title</h5>
+                            <p class="card-text" id="cardContent1">This card has supporting text below as a natural
+                                lead-in to additional
+                                content.</p>
+                        </div>
+                        <div class="card-footer">
+                            <small class="text-body-secondary">Last updated 3 mins ago</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="card3.png" class="card-img-top" alt="...">
+                        <div class="card-img-overlay text-white">
+                            <h5 class="card-title">Property 3</h5>
+                            <p class="card-text">From 300000 AED</p>
+                            <p class="card-text"><small>Last updated 3 mins ago</small></p>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title" id="cardTitle2">Card title</h5>
+                            <p class="card-text" id="cardContent2">This is a wider card with supporting text below as a
+                                natural lead-in to
+                                additional content. This card has even longer content than the first to show that equal
+                                height action.</p>
+                        </div>
+                        <div class="card-footer">
+                            <small class="text-body-secondary">Last updated 3 mins ago</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+    <hr>
+    <div class="container-fluid bg-black text-bg-dark">
+
+
+        <div class=" row p-5 bg-black text-bg-dark">
+
+
+            <div class="col-6">
+                <h4>About Us</h4>
+                <h2>Real Estate Experts</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus non erat convallis, hendrerit leo
+                    eget,
+                    efficitur leo. Quisque ullamcorper, nulla quis tempus dictum, ex massa eleifend risus, eu faucibus
+                    risus
+                    ligula ac sem.</p>
+                <p>Nulla mollis lectus quis justo bibendum, in efficitur sapien porttitor. Curabitur pretium lobortis
+                    volutpat.
+                    Etiam vitae faucibus nisl, ac consequat urna. Nullam nec magna at neque gravida cursus at sed orci.
+                    Duis
+                    in
+                    ligula at ex consectetur mattis. Proin non magna eget metus elementum pulvinar in ut ante. </p>
+                <button class="btn btn-light">Get in Touch</button>
+            </div>
+            <div class="col-6 p-5">
+                <section class="splide" id="card-carousel" aria-label="Basic Structure Example">
+                    <div class="splide__track">
+                        <ul class="splide__list">
+                            <li class="splide__slide">
+                                <div class="splide__slide__container card">
+
+                                    <img src="card1.png" alt="">
+                                    <div class="card-img-overlay text-white">
+                                        <h5 class="card-title">Card title</h5>
+                                        <p class="card-text">Sales Property Advisor.</p>
+
+                                    </div>
+
+                                </div>
+
+                            </li>
+                            <li class="splide__slide">
+                                <div class="splide__slide__container card">
+                                    <img src="card2.png" alt="">
+                                    <div class="card-img-overlay text-white">
+                                        <h5 class="card-title">Card title</h5>
+                                        <p class="card-text">Sales Property Advisor.</p>
+
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="splide__slide">
+                                <div class="splide__slide__container card">
+                                    <img src="card3.png" alt="">
+                                    <div class="card-img-overlay text-white">
+                                        <h5 class="card-title">Card title</h5>
+                                        <p class="card-text">Sales Property Advisor.</p>
+
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+            </div>
+
+        </div>
+    </div>
+    <hr>
+    <div class="p-5 bg-black text-bg-dark">
+        <div>
+            <h3>Browse by Property Type</h3>
+            <h4>Handpicked properties for you</h4>
+        </div>
+        <div>
+            <section id="thumbnail-carousel" class="splide"
+                aria-label="The carousel with thumbnails. Selecting a thumbnail will change the Beautiful Gallery carousel.">
+                <div class="splide__track">
+                    <ul class="splide__list">
+                        <li class="splide__slide">
+                            <div class="splide__slide__container card">
+
+                                <img src="card1.png" alt="">
+                                <div class="card-img-overlay text-white">
+                                    <h5 class="card-title">Card title</h5>
+                                    <p class="card-text">Sales Property Advisor.</p>
+
+                                </div>
+
+                            </div>
+
+                        </li>
+                        <li class="splide__slide">
+                            <div class="splide__slide__container card">
+                                <img src="card2.png" alt="">
+                                <div class="card-img-overlay text-white">
+                                    <h5 class="card-title">Card title</h5>
+                                    <p class="card-text">Sales Property Advisor.</p>
+
+                                </div>
+                            </div>
+                        </li>
+                        <li class="splide__slide">
+                            <div class="splide__slide__container card">
+                                <img src="card3.png" alt="">
+                                <div class="card-img-overlay text-white">
+                                    <h5 class="card-title">Card title</h5>
+
+
+                                </div>
+                            </div>
+                        </li>
+                        <li class="splide__slide">
+                            <div class="splide__slide__container card">
+
+                                <img src="card1.png" alt="">
+                                <div class="card-img-overlay text-white">
+                                    <h5 class="card-title">Card title</h5>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="splide__slide">
+                            <div class="splide__slide__container card">
+                                <img src="card2.png" alt="">
+                                <div class="card-img-overlay text-white">
+                                    <h5 class="card-title">Card title</h5>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="splide__slide">
+                            <div class="splide__slide__container card">
+                                <img src="card3.png" alt="">
+                                <div class="card-img-overlay text-white">
+                                    <h5 class="card-title">Card title</h5>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="splide__slide">
+                            <div class="splide__slide__container card">
+
+                                <img src="card1.png" alt="">
+                                <div class="card-img-overlay text-white">
+                                    <h5 class="card-title">Card title</h5>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="splide__slide">
+                            <div class="splide__slide__container card">
+                                <img src="card2.png" alt="">
+                                <div class="card-img-overlay text-white">
+                                    <h5 class="card-title">Card title</h5>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="splide__slide">
+                            <div class="splide__slide__container card">
+                                <img src="card3.png" alt="">
+                                <div class="card-img-overlay text-white">
+                                    <h5 class="card-title">Card title</h5>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <div>
+        <div class="container-fluid row p-5" id="invest-div">
+            <div class="col-4 align-self-end text-light">
+
+
+                <h1 class="text-lg-start">Why Invest in Dubai</h1>
+
+                <div class="card">
+                    <div class="card-body" id="test">
+                        <h5 class="card-title">High Returns</h5>
+                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                        <p>Learn More</p>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-8">
+                <div class="justify-content-end" style="text-align: -webkit-right;">
+                    <div class="card " style="width: 120px;">
+                        <img src="https://picsum.photos/200?random=1" alt="">
+                        <div class="card-img-overlay text-white">
+                            <h6 class="card-text ">01</h6>
+                            <h5 class="card-title">Card title</h5>
+                        </div>
+                    </div>
+                    <div class="card" style="width: 120px;">
+                        <img src="https://picsum.photos/200?random=2" alt="">
+                        <div class="card-img-overlay text-white">
+                            <h6 class="card-text ">02</h6>
+                            <h5 class="card-title">Card title</h5>
+                        </div>
+                    </div>
+                    <div class="card" style="width: 120px;">
+                        <img src="https://picsum.photos/200?random=3" alt="">
+                        <div class="card-img-overlay text-white">
+                            <h6 class="card-text ">03</h6>
+                            <h5 class="card-title">Card title</h5>
+                        </div>
+                    </div>
+                    <div class="card" style="width: 120px;">
+                        <img src="https://picsum.photos/200?random=4" alt="">
+                        <div class="card-img-overlay text-white">
+                            <h6 class="card-text ">04</h6>
+                            <h5 class="card-title">Card title</h5>
+                        </div>
+                    </div>
+                    <div class="card" style="width: 120px;">
+                        <img src="https://picsum.photos/200?random=5" alt="">
+                        <div class="card-img-overlay text-white">
+                            <h6 class="card-text ">05</h6>
+                            <h5 class="card-title ">Card title</h5>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <div>
+        <div class="text-light text-center p-5">
+            <h2>Testimonials</h2>
+            <h6>Feedback submitted by Our Clients</h6>
+            <hr>
+        </div>
+        <div class="p-5">
+            <section id="testimonial-carousel" class="splide"
+                aria-label="The carousel with thumbnails. Selecting a thumbnail will change the Beautiful Gallery carousel.">
+                <div class="splide__track">
+                    <ul class="splide__list">
+                        <li class="splide__slide">
+                            <div class="splide__slide__container card bg-transparent text-light">
+
+                                <div class="card-body  ">
+                                    <h5 class="card-title">Secondary card title</h5>
+                                    <p class="card-text">Some quick example text to build on the card title and make up
+                                        the bulk of
+                                        the card's content.</p>
+                                </div>
+                                <div class="card-footer">-Customer 1</div>
+                            </div>
+                        </li>
+                        <li class="splide__slide">
+                            <div class="splide__slide__container card bg-transparent text-light">
+
+                                <div class="card-body  ">
+                                    <h5 class="card-title">Secondary card title</h5>
+                                    <p class="card-text">Some quick example text to build on the card title and make up
+                                        the bulk of
+                                        the card's content.</p>
+                                </div>
+                                <div class="card-footer">-Customer 1</div>
+                            </div>
+                        </li>
+                        <li class="splide__slide">
+                            <div class="splide__slide__container card bg-transparent text-light">
+
+                                <div class="card-body  ">
+                                    <h5 class="card-title">Secondary card title</h5>
+                                    <p class="card-text">Some quick example text to build on the card title and make up
+                                        the bulk of
+                                        the card's content.</p>
+                                </div>
+                                <div class="card-footer">-Customer 1</div>
+                            </div>
+                        </li>
+                        <li class="splide__slide">
+                            <div class="splide__slide__container card bg-transparent text-light">
+
+                                <div class="card-body  ">
+                                    <h5 class="card-title">Secondary card title</h5>
+                                    <p class="card-text">Some quick example text to build on the card title and make up
+                                        the bulk of
+                                        the card's content.</p>
+                                </div>
+                                <div class="card-footer">-Customer 1</div>
+                            </div>
+                        </li>
+                        <li class="splide__slide">
+                            <div class="splide__slide__container card bg-transparent text-light">
+
+                                <div class="card-body  ">
+                                    <h5 class="card-title">Secondary card title</h5>
+                                    <p class="card-text">Some quick example text to build on the card title and make up
+                                        the bulk of
+                                        the card's content.</p>
+                                </div>
+                                <div class="card-footer">-Customer 1</div>
+                            </div>
+                        </li>
+                        <li class="splide__slide">
+                            <div class="splide__slide__container card bg-transparent text-light">
+
+                                <div class="card-body  ">
+                                    <h5 class="card-title">Secondary card title</h5>
+                                    <p class="card-text">Some quick example text to build on the card title and make up
+                                        the bulk of
+                                        the card's content.</p>
+                                </div>
+                                <div class="card-footer">-Customer 1</div>
+                            </div>
+                        </li>
+
+                        <li class="splide__slide">
+                            <div class="splide__slide__container card bg-transparent text-light">
+
+                                <div class="card-body">
+                                    <h5 class="card-title">Secondary card title</h5>
+                                    <p class="card-text">Some quick example text to build on the card title and make up
+                                        the bulk of
+                                        the card's content.</p>
+                                </div>
+                                <div class="card-footer">-Customer 2</div>
+                            </div>
+                        </li>
+                        <li class="splide__slide">
+                            <div class="splide__slide__container card bg-transparent text-light">
+
+                                <div class="card-body ">
+                                    <h5 class="card-title">Secondary card title</h5>
+                                    <p class="card-text">Some quick example text to build on the card title and make up
+                                        the bulk of
+                                        the card's content.</p>
+                                </div>
+                                <div class="card-footer">-Customer 3</div>
+                            </div>
+                        </li>
+
+                    </ul>
+                </div>
+            </section>
+
+
+        </div>
+        <div>
+
+        </div>
+
+
+    </div>
+    <div>
+        <div class="card text-end p-4 bg-black" style="height: auto;">
+            <img src="test_cleanup.png" class="card-img" alt="...">
+            <div class="card-img-overlay p-5 h-25">
+                <h1 class="card-title">Modern Living, Mordern Buying</h1>
+                <h4 class="card-text">Pay with Cryptocurrency.</h4>
+                <button class="btn btn-dark">Learn More</button>
+            </div>
+        </div>
+    </div>
+
+    <hr>
+
+
+    <div>
+        <div class="card text-end text-light">
+            <img src="explore_cleanup.png" class="card-img" alt="...">
+            <div class="card-img-overlay p-5">
+                <h1 class="card-title">Explore Dubai</h1>
+                <h4 class="card-text">Get a quick estimate on your home today.</h4>
+                <button class="btn btn-outline-light">Learn More</button>
+            </div>
+        </div>
+    </div>
+    <hr>
+
+    <div>
+        <div class="card  text-light">
+            <img src="location_cleanup.png" class="card-img" alt="...">
+            <div class="card-img-overlay p-5">
+                <h1 class="card-title">Find Your Dream Location</h1>
+                <h4 class="card-text">Explore the most popular communities in Dubai.</h4>
+                <button class="btn btn-lg btn-light">Learn More</button>
+            </div>
+        </div>
+    </div>
+
+    <div>
+        <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 my-5 text-light p-5">
+
+            <div class="col mb-3">
+                <h5>Section</h5>
+                <ul class="nav flex-column ">
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-light">Home</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-light">Features</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-light">Pricing</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-light">FAQs</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-light">About</a></li>
+                </ul>
+            </div>
+
+            <div class="col mb-3">
+                <h5>Section</h5>
+                <ul class="nav flex-column ">
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-light">Home</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-light">Features</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-light">Pricing</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-light">FAQs</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-light">About</a></li>
+                </ul>
+            </div>
+
+            <div class="col mb-3">
+                <h5>Section</h5>
+                <ul class="nav flex-column">
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-light">Home</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-light">Features</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-light">Pricing</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-light">FAQs</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-light">About</a></li>
+                </ul>
+            </div>
+
+            <div class="col mb-3">
+                <h5>Section</h5>
+                <ul class="nav flex-column">
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-light">Home</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-light">Features</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-light">Pricing</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-light">FAQs</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-light">About</a></li>
+                </ul>
+            </div>
+
+            <div class="col mb-6 text-end">
+                <h2>Dubai, UAE</h2>
+                <h5>91 Shk. Zayed Road, DIFC</h5>
+                <button class="btn btn-lg btn-outline-light">Call Us</button>
+            </div>
+        </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js"
+        integrity="sha384-Rx+T1VzGupg4BHQYs2gCW9It+akI2MM/mndMCy36UVfodzcJcF0GGLxZIzObiEfa"
+        crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/76d7af4f3d.js" crossorigin="anonymous"></script>
+    <script>
+        // document.addEventListener('DOMContentLoaded', function () {
+        //     var splide = new Splide('.splide');
+        //     splide.mount();
+        // });
+        document.addEventListener('DOMContentLoaded', function () {
+            new Splide('#card-carousel', {
+                type: 'loop',
+
+
+                perPage: 3,
+                perMove: 1,
+                focus: 'center',
+                breakpoints: {
+                    640: {
+                        perPage: 1,
+                    },
+                },
+            }).mount();
+
+            new Splide('#thumbnail-carousel', {
+                fixedWidth: 200,
+                fixedHeight: 120,
+                gap: 10,
+                rewind: true,
+                pagination: false,
+            }).mount();
+
+            new Splide('#testimonial-carousel', {
+                type: 'loop',
+                fixedWidth: 250,
+                fixedHeight: 300,
+                gap: 10,
+                rewind: true,
+                pagination: false,
+            }).mount();
+        });
+    </script>
+
+    <script>
+        // Function to handle the card click event
+        function handleCardClick(cardIndex) {
+            // Get the invest-div element
+            var investDiv = document.getElementById("invest-div");
+
+            // Get all the cards with class card
+            var cards = document.getElementsByClassName("card");
+            var card = document.getElementById("test");
+
+            // Get the card that was clicked
+            var clickedCard = cards[cardIndex];
+
+            // Define an array of colors (you can add more colors here if needed)
+            var colors = ["lightblue", "lightgreen", "lightpink", "pink", "lightsalmon"];
+
+            // Get the color based on the card index
+            var color = colors[cardIndex % colors.length];
+
+            // Change the background color of invest-div
+            investDiv.style.backgroundColor = color;
+
+            // Get the card title and card text elements inside the clicked card
+            var cardTitle = clickedCard.querySelector(".card-title");
+            var cardText = clickedCard.querySelector(".card-text");
+
+            // Define an array of texts (you can add more texts here if needed)
+            var texts = [
+                "Card Text 1",
+                "Card Text 2",
+                "Card Text 3",
+                "Card Text 4",
+                "Card Text 5"
+            ];
+
+            // Get the text based on the card index
+            var text = texts[cardIndex % texts.length];
+
+            // Change the text inside the card
+            // cardTitle.textContent = "New Card Title";
+            // cardText.textContent = text;
+            // Get the card in the col-4 section
+            var col4Card = document.getElementById("test");
+            var card4Title = col4Card.querySelector(".card-title");
+            var cardT4ext = col4Card.querySelector(".card-text");
+
+            // Change the text inside the col-4 card
+            card4Title.innerHTML = "New Title ";
+            cardT4ext.textContent = text;
+        }
+
+        // Add click event listeners to each card
+        var cards = document.getElementsByClassName("card");
+        for (var i = 0; i < cards.length; i++) {
+            cards[i].addEventListener("click", function () {
+                // Get the index of the clicked card
+                var cardIndex = Array.prototype.indexOf.call(cards, this);
+
+                // Call the handleCardClick function with the card index as an argument
+                handleCardClick(cardIndex);
+            });
+        }
+
+        function changeCardContent(index) {
+            const titles = ["Card title 1", "Card title 2"];
+            const contents = [
+                "01 This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.",
+                "02 This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer."
+            ];
+
+            // Get the card elements
+            const cardTitleElement = document.getElementById('cardTitle' + index);
+            const cardContentElement = document.getElementById('cardContent' + index);
+
+            // Update the card content with the corresponding title and content from the arrays
+            cardTitleElement.textContent = titles[index];
+            cardContentElement.textContent = contents[index];
+        }
+
+
+    </script>
+
+</body>
+
+</html>

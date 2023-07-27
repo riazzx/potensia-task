@@ -1,0 +1,52 @@
+
+body {
+    background-color: black;
+}
+#hero-banner {
+    margin-top: -95px;
+    border: 0 !important;
+    border-radius: 0 !important;
+}
+
+#nav {
+    z-index: 10000;
+}
+
+
+#nav-list-search {
+   margin-top: 20px;
+   margin-left: 5px;
+   text-decoration: none;
+   color: #ffffff;
+}
+
+#logo {
+    width: 90px;
+    height: auto;
+
+}
+
+.splide__slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+.card {
+    border: 0;
+    margin: 0;
+    border-radius: 0;
+}
+
+hr {
+    border: none;
+    background-color: #ffffff;
+    height: 3px;
+    margin-left: 50px;
+    margin-right: 50px;
+    opacity: 1;
+}
+
+#invest-div {
+  background-color: chocolate;
+}
